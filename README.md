@@ -1,0 +1,169 @@
+[terima-kasih.html](https://github.com/user-attachments/files/31260350/terima-kasih.html)
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terima Kasih ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            padding: 40px;
+            width: 90%;
+            max-width: 500px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+        }
+
+        .heart {
+            font-size: 70px;
+            animation: heartbeat 1.3s infinite;
+        }
+
+        h1 {
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        button {
+            border: none;
+            padding: 14px 30px;
+            border-radius: 50px;
+            background: white;
+            color: #6c5ce7;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        #message {
+            display: none;
+            margin-top: 25px;
+            font-size: 24px;
+            font-weight: bold;
+            animation: fadeIn 1s ease;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            top: -10px;
+            animation: fall 3s linear forwards;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="heart">❤️</div>
+
+        <h1>Thank You!</h1>
+
+        <p>
+            Thankyou loh
+            <br>
+           
+        </p>
+
+        <button onclick="showThanks()">
+            Klik di sini ✨
+        </button>
+
+        <div id="message">
+            Xièxiè nǐ 谢谢你 ❤️<br>
+        </div>
+
+    </div>
+
+    <script>
+        function showThanks() {
+
+            document.getElementById("message").style.display = "block";
+
+            for (let i = 0; i < 80; i++) {
+
+                const confetti = document.createElement("div");
+
+                confetti.classList.add("confetti");
+
+                confetti.style.left = Math.random() * 100 + "vw";
+
+                confetti.style.backgroundColor =
+                    ["#ff7675", "#ffeaa7", "#74b9ff", "#55efc4", "#fd79a8"]
+                    [Math.floor(Math.random() * 5)];
+
+                confetti.style.animationDuration =
+                    (Math.random() * 2 + 2) + "s";
+
+                document.body.appendChild(confetti);
+
+                setTimeout(() => {
+                    confetti.remove();
+                }, 4000);
+            }
+        }
+    </script>
+
+</body>
+</html>
