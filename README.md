@@ -1,1 +1,0 @@
-# terima-kasih
