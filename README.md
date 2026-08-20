@@ -1,5 +1,4 @@
-[terima-kasih.html](https://github.com/user-attachments/files/31260350/terima-kasih.html)
-<!DOCTYPE html>
+
 <html lang="id">
 <head>
     <meta charset="UTF-8">
